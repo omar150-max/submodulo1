@@ -1,0 +1,244 @@
+:root {
+    --fondo-principal: #b2e2a8;
+    --fondo-Inicio: #d8d5d1;
+    --fondo-Teoria: #f7d3ab;
+    --fondo-Psicologia: #f7d3ab;
+    --fondo-Rgb: #f7d3ab;
+    --color-subs: #8b0000;
+
+    --color-nav: #ca4000;
+    --color-nav-hover: #f7bf7f;
+    --color-texto: #000000;
+    --color-secundario: #000000;
+    --color-enlace: hsl(0, 0%, 93%);
+    --color-enlace-hover: #ffffff;
+    --color-borde: #b0bec5;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo-principal);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.e{
+    background-color: var(--color-nav);
+    min-height: 50px;
+    width: 100%;
+    
+}
+/* Navbar */
+nav {
+    width: 100%;
+    background-color: var(--color-nav);
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se apilen en columnas si es necesario */
+}
+
+/* Estilos para los enlaces del menú */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 0 15px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover en los enlaces */
+nav a:hover {
+    background-color: var(--color-nav-hover);
+    transform: scale(1.1);
+}
+
+/* Secciones */
+.section {
+    max-width: 900px;
+    width: 90%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px var(--color-sombra);
+    margin: 40px auto;
+    border: 2px solid var(--color-borde);
+    display: none;
+    text-align: justify;
+    border: solid #000000;
+}
+
+/* Mostrar la sección activa */
+.section:target {
+    display: block;
+}
+
+/* Fondos individuales */
+#Inicio {
+    background-color: var(--fondo-Inicio);
+}
+
+#Teoria {
+    background-color: var(--fondo-Teoria);
+}
+
+#Psicologia {
+    background-color: var(--fondo-Psicologia);
+}
+
+#Rgb {
+    background-color: var(--fondo-Rgb);
+}
+
+/* Títulos */
+h1{
+    color: var(--color-nav);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border: none; 
+    padding-bottom: 0;
+    text-align: center;
+}
+
+h2, h3{
+    color: var(--color-subs);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border: none; 
+    padding-bottom: 0;
+    text-align: center;
+}
+
+/* Portada principal */
+.portada-header {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e3a5f;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Párrafos */
+p {
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: var(--color-secundario);
+}
+
+/* Enlaces */
+a {
+    color: var(--color-enlace);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-enlace-hover);
+    text-decoration: underline;
+    transition: all 0.2s ease;
+}
+
+/* Imágenes estándar */
+img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 40px auto 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen más grande específica para hexadecimal */
+img.hexadecimal {
+    width: 400px;
+}
+
+.portada-header{
+    text-align: center;
+}
+ 
+.por{
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--color-nav);
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav a {
+        margin: 10px 0; /* Reducción del margen en dispositivos pequeños */
+        padding: 10px 20px; /* Ajustar el padding para dispositivos móviles */
+    }
+
+    nav {
+        flex-direction: column; /* Los elementos se apilan en una columna */
+        align-items: center; /* Centrar los elementos */
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    nav a {
+        margin: 10px 0; /* Reducción del margen en dispositivos pequeños */
+        padding: 10px 20px; /* Ajustar el padding para dispositivos móviles */
+    }
+
+    nav {
+        flex-direction: column; /* Los elementos se apilan en una columna */
+        align-items: center; /* Centrar los elementos */
+        width: 100%;
+    }
+    .e{
+        background-color: var(--color-nav);
+        min-height: 50px;
+        width: 109%;
+    }
+}
+
+@media (max-width: 400px) {
+    nav a {
+        margin: 10px 0; /* Reducción del margen en dispositivos pequeños */
+        padding: 10px 20px; /* Ajustar el padding para dispositivos móviles */
+    }
+
+    nav {
+        flex-direction: column; /* Los elementos se apilan en una columna */
+        align-items: center; /* Centrar los elementos */
+        width: 100%;
+    }
+    .e{
+        background-color: var(--color-nav);
+        min-height: 50px;
+        width: 111%;
+    }
+}
